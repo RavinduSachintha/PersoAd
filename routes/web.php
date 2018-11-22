@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/adds_creating', 'AdvertisementsController@create');
+Route::post('/adds_creating', 'AdvertisementsController@store');
