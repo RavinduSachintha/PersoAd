@@ -1,0 +1,92 @@
+    /* ####################################################
+    :: Template Name: Essence - Fashion Ecommerce Template
+    :: Author: Colorlib
+    :: Author URL: https://colorlib.com
+    :: Description: Essence is smart & elegant fashion e-commerce Template. It's suitable for all e-commerce business platform.
+    :: Version: 1.0.0
+    :: Created: April 27, 2018
+    :: Last Updated: May 2, 2018
+    #################################################### */
+
+    /* ---------------------------------------
+    ##### - PLACE YOUR CUSTOM CSS HERE - #####
+    --------------------------------------- */
+
+
+    #bigcontainer
+    {
+      height: 9px;
+      z-index: 1000000000000;
+      background-color: #dadada;
+      margin-bottom: auto;
+      border-color: #dadada;
+    }
+    .container-fluid
+    {
+      height: 10px;
+    }
+    .navbar-header
+    {
+      height: 10px;
+    }
+
+
+    #login-dp{
+        min-width: 250px;
+        padding: 14px 14px 0;
+        overflow:hidden;
+        background-color:#ffffff;
+    }
+    #login-dp .help-block{
+        font-size:12px
+    }
+    #login-dp .bottom{
+        background-color:rgba(255,255,255,.8);
+        border-top:1px solid #ddd;
+        clear:both;
+        padding:14px;
+        position: absolute;
+    }
+    #login-dp .social-buttons{
+        margin:12px 0
+    }
+    #login-dp .social-buttons a{
+        width: 49%;
+    }
+    #login-dp .form-group {
+        margin-bottom: 10px;
+    }
+    .btn-fb{
+        color: #fff;
+        background-color:#3b5998;
+    }
+    .btn-fb:hover{
+        color: #fff;
+        background-color:#496ebc
+    }
+    .btn-tw{
+        color: #fff;
+        background-color:#55acee;
+    }
+    .btn-tw:hover{
+        color: #fff;
+        background-color:#59b5fa;
+    }
+    #signinbtn
+    {
+      background-color:#f4b642;
+    }
+    #signinbtn:hover
+    {
+      background-color:black;
+    }
+    @media(max-width:768px){
+        #login-dp{
+            background-color: inherit;
+            color: #fff;
+        }
+        #login-dp .bottom{
+            background-color: inherit;
+            border-top:0 none;
+        }
+    }
