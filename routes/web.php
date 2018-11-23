@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/adds_creating', 'AdvertisementsController@create');
+Route::post('/adds_creating', 'AdvertisementsController@store');
+
 Route::get('/index', function () {
     return view('index');
 });
