@@ -14,7 +14,7 @@ class AdvertisementsController extends Controller
      */
     public function index()
     {
-        return view('/adds_creating');
+        return view('pages.adds_creating');
     }
 
     /**
@@ -24,7 +24,7 @@ class AdvertisementsController extends Controller
      */
     public function create()
     {
-        return view('/adds_creating');
+        return view('pages.adds_creating');
     }
 
     /**
@@ -36,7 +36,7 @@ class AdvertisementsController extends Controller
     public function store(Request $request)
     {
         advertisements::create($request->all());
-        return view('/adds_creating');
+        return view('pages.adds_creating');
         dd($request->all());
     }
 

@@ -1,5 +1,5 @@
 
-            <div class="container border text-center" style="border-radius:10px;padding: 0px; margin-bottom: 20px">
+            <div class="container border text-center" style="border-radius:10px;padding: 0; margin-bottom: 20px">
 
                 <h4 class="cardheader" style="color: white">{{ __('Create Notifications') }}</h4>
                 <div class="container">

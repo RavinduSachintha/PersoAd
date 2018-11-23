@@ -11,36 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Auth::routes();
+
+Route::get('/', 'PagesController@index');
+
+Route::get('/shop', 'PagesController@shop');
+
+Route::get('/cart', 'PagesController@cart');
+
+Route::get('/checkout', 'PagesController@checkout');
+
+Route::get('/product-details', 'PagesController@product_details');
+
+Route::get('/user-account', 'UserController@index')->name('user-account');
 
 Route::get('/adds_creating', 'AdvertisementsController@create');
 Route::post('/adds_creating', 'AdvertisementsController@store');
 
-Route::get('/index', function () {
-    return view('index');
-});
-
-Route::get('/shop', function () {
-    return view('shop');
-});
-
-Route::get('/checkout', function () {
-    return view('checkout');
-});
-
-Route::get('/cart', function () {
-    return view('cart');
-});
-
-Route::get('/product-details', function () {
-    return view('product-details');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@index');
 Route::get('users', 'AdminController@user');
 Route::get('advertisement', 'AdminController@adver');
