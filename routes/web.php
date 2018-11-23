@@ -41,3 +41,6 @@ Route::get('/product-details', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'AdminController@index');
+Route::get('users', 'AdminController@user');
+Route::get('advertisement', 'AdminController@adver');
