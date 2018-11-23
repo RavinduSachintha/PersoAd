@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/adds_creating', 'AdvertisementsController@create');
+Route::post('/adds_creating', 'AdvertisementsController@store');
+
 Route::get('/index', function () {
     return view('index');
 });
@@ -34,3 +37,10 @@ Route::get('/cart', function () {
 Route::get('/product-details', function () {
     return view('product-details');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'AdminController@index');
+Route::get('users', 'AdminController@user');
+Route::get('advertisement', 'AdminController@adver');
