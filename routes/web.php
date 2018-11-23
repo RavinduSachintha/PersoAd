@@ -34,3 +34,7 @@ Route::get('/cart', function () {
 Route::get('/product-details', function () {
     return view('product-details');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
