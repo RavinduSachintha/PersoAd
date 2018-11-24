@@ -35,9 +35,18 @@ class AdvertisementsController extends Controller
      */
     public function store(Request $request)
     {
-        advertisements::create($request->all());
+
+        $advertisements = new advertisements();
+        //dd($request->all()->file('photo')->getClientOriginalName());
+        advertisements::create([
+            'title'=> request('title'),
+            'category'=> request('category'),
+            'body' => request('body'),
+            'photo' => $request->photo->getClientOriginalName(),
+        ]);
+        $request->file('photo')->storeAs('public/Advertisements',$request->photo->getClientOriginalName());
+        
         return view('/adds_creating');
-        dd($request->all());
     }
 
     /**
