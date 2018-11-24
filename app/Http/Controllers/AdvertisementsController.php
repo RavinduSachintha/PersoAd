@@ -45,7 +45,7 @@ class AdvertisementsController extends Controller
         ]);
         $request->file('photo')->storeAs('public/Advertisements',$request->photo->getClientOriginalName());
         
-        return view('/adds_creating');
+        return view('pages.adds_creating');
     }
 
     /**
