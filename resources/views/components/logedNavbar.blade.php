@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm py-0 bg-dark navbar-dark fixed-top py-md-0" style="margin-left: 230px; height:70px;">
+<nav class="navbar navbar-expand-sm py-0 bg-dark navbar-dark fixed-top py-md-0" style="margin-left: 200px; height:70px;">
 
     <div class="container">
   
@@ -13,7 +13,7 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown " class="nav-link dropdown-toggle " style="font-size:large; margin-right:30px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown " class="nav-link dropdown-toggle " style="font-size:large; margin-right:30px; margin-top:-60px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             Admin <span class="caret"></span>
                         </a>
                         

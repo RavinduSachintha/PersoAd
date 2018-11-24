@@ -23,4 +23,5 @@ class UserController extends Controller
     {
         return view('pages.user-account');
     }
+
 }
