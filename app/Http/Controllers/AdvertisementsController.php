@@ -12,20 +12,16 @@ class AdvertisementsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    function index()
     {
         return view('pages.adds_creating');
     }
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('pages.adds_creating');
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -45,7 +41,8 @@ class AdvertisementsController extends Controller
         ]);
         $request->file('photo')->storeAs('public/Advertisements',$request->photo->getClientOriginalName());
         
-        return view('pages.adds_creating');
+        
+        return view('pages.user-account');
     }
 
     /**
@@ -56,7 +53,15 @@ class AdvertisementsController extends Controller
      */
     public function show(advertisements $advertisements)
     {
-        //
+        $navVal = 1;
+        $advertisements =Advertisements::orderBy('id', 'desc')->where('flag' , '1')->where('paid' , 'yes')->get();
+        return view('pages.index', compact('advertisements'))->with('navVal', $navVal);
+    }
+
+    public function view(advertisements $advertisements)
+    {
+    
+        return view('/pages.product');
     }
 
     /**

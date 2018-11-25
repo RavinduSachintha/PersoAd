@@ -53,6 +53,15 @@
                 <li class="active"><a href="/checkout">Checkout</a></li>
                 @break
 
+                @case(6)
+                <li><a href="/">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/product-details">Product</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/checkout">Checkout</a></li>
+                <li class="active"><a href="/adds_creating">Create</a></li>
+                @break
+
             @endswitch
         </ul>
     </nav>

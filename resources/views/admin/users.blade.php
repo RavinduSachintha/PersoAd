@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 <div class="container">
+    @include('components.message')
     <h2>User Account Details</h2>
     <hr />
     <table class="table table-bordered">
@@ -16,11 +17,10 @@
                 <td>{{$u->name}}</td>
                 <td>{{$u->email}}</td>
             <td>
-    
+                    <a href="{{route('delete', $u->id)}}" class="btn" role="button" style="background-color:bisque"><i class="fa fa-trash" style="color:red; font-size:20px; margin-top:-5px;"></i></a>  
             </td>
-            @endforeach
         </tr>
-    
+        @endforeach
         </table>
-    </div>
+    </div> 
 @endsection
