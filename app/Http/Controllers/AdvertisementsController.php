@@ -58,10 +58,12 @@ class AdvertisementsController extends Controller
         return view('pages.index', compact('advertisements'))->with('navVal', $navVal);
     }
 
-    public function view(advertisements $advertisements)
+    public function view($id)
     {
     
-        return view('/pages.product');
+        $navVal = 3;
+        $advertisements = Advertisements::find($id);
+        return view('pages.product-details',compact('advertisements'))->with('navVal', $navVal);
     }
 
     /**
