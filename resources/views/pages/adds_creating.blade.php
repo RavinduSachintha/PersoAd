@@ -1,20 +1,8 @@
-@extends('layouts.main')
-
-@section('content')
-
-    @include('components.search-wrapper')
-
-    <!-- ##### Main Content Wrapper Start ##### -->
-    <div class="main-content-wrapper d-flex clearfix">
 
                         
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8">
-                            <div class="card">
-                                <div class="card-header">{{ __('Create Your Advertisement Here') }}</div>
+
                                     <div class="card-body">
-                                        <form method="POST" action="/adds_creating" enctype="multipart/form-data">
+                                        <form method="POST" action="/user-account" enctype="multipart/form-data">
                                               {{ csrf_field() }}
                                                 <div class="form-group row">
                                                         <label for="title" class="col-md-4 col-form-label text-md-right"><b>{{ __('Title') }}</b></label>
@@ -25,12 +13,7 @@
                                                 <div class="form-group row">
                                                         <label for="body" class="col-md-4 col-form-label text-md-right"><b>{{ __('Category') }}</b></label>
                                                         <div class="col-md-6">
-                                                            <select name="category">
-                                                                <option value="Electronic Appliances">Electronic Appliances</option>
-                                                                <option value="Electronic Appliances">Electronic Appliances</option>
-                                                                <option value="Electronic Appliances">Electronic Appliances</option>
-                                                                <option value="Electronic Appliances">Electronic Appliances</option>
-                                                            </select>
+                                                            @include('pages.categories')
                                                         </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -55,21 +38,11 @@
                                                 </div>
                                          </form>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                   
                
           
-    <!-- ##### Main Content Wrapper End ##### -->
-
-    </div>
-    <!-- ##### Main Content Wrapper End ##### -->
-
-    @include('components.newsletter')
-
-@endsection
+ 
 
             
                     
