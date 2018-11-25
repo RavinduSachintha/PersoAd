@@ -50,4 +50,9 @@ class PagesController extends Controller
         return view('pages.checkout')->with('navVal', $navVal);
     }
 
+    function adds_creating()
+    {
+        $navVal = 6;
+        return view('pages.adds_creating')->with('navVal', $navVal);
+    }
 }

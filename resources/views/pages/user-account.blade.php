@@ -15,7 +15,7 @@
                     @endif
 
                     You are logged in!
-                    <br>Methenta thamai user kenek log unama Direct wenne. So uge dashboard eka hari mokak hari methana. :D<br> Oya PersoAd eka ebuwama aaye home page ekata yano. ethana aye login button eka thino. but dan user kenek log wela inne.<br> e login button eka ethanin ayin wela logout eka enna eno. but anith ewa hadanna danata me tika athi ne ;)
+                    @include('pages.adds_creating')
                 </div>
             </div>
         </div>

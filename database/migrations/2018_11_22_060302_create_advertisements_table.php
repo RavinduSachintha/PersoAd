@@ -20,6 +20,7 @@ class CreateAdvertisementsTable extends Migration
             $table->integer('flag')->default('0');
             $table->text('body');
             $table->string('photo')->unique();
+            $table->string('paid')->default('no');
             $table->timestamps();
         });
     }

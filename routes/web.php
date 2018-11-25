@@ -15,6 +15,7 @@ Auth::routes();
 
 Route::get('/', 'PagesController@index');
 
+
 Route::get('/shop', 'PagesController@shop');
 
 Route::get('/cart', 'PagesController@cart');
@@ -25,8 +26,10 @@ Route::get('/product-details', 'PagesController@product_details');
 
 Route::get('/user-account', 'UserController@index')->name('user-account');
 
-Route::get('/adds_creating', 'AdvertisementsController@create');
+Route::get('/adds_creating', 'AdvertisementsController@index');
 Route::post('/adds_creating', 'AdvertisementsController@store');
+Route::get('/', 'AdvertisementsController@show');
+Route::get('/product', 'AdvertisementsController@view');
 
 Route::get('/admin', 'AdminController@index');
 Route::get('users', 'AdminController@user');
