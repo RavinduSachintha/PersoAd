@@ -22,12 +22,13 @@ Route::get('/cart', 'PagesController@cart');
 
 Route::get('/checkout', 'PagesController@checkout');
 
-//Route::get('/product-details', 'PagesController@product_details');
 
-Route::get('/user-account', 'UserController@index')->name('user-account');
 
-Route::get('/adds_creating', 'AdvertisementsController@index');
-Route::post('/adds_creating', 'AdvertisementsController@store');
+//Route::get('/user-account', 'UserController@index')->name('user-account');
+Route::get('/user-account', 'CategoriesController@show')->name('user-account');
+
+//Route::get('/user-account', 'AdvertisementsController@index');
+Route::post('/user-account', 'AdvertisementsController@store')->name('user-account');
 Route::get('/', 'AdvertisementsController@show');
 Route::get('/product-details/{id}', 'AdvertisementsController@view')->name('product-details');
 
