@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
-use App\Advertisements;
+use App\advertisements;
 use App\Category;
 use DB;
 class AdminController extends Controller
 {
     public function index(){
-        return view('pages.adminHome');
+        return view('pages.adminHome')->with('ad',advertisements::all());
     }
     public function user(){
         return view('admin.users')->with('user',User::all());
     }
     public function adver(){
-        return view('admin.adds')->with('ad',Advertisements::all());
+        return view('admin.adds')->with('ad',advertisements::all());
     }
     public function category(){
         return view('admin.category')->with('cat',Category::all());
@@ -26,7 +26,7 @@ class AdminController extends Controller
         return redirect('users')->with('success','User has been removed!');
     }
     public function deletead($id){
-        $a=Advertisements::find($id);
+        $a=advertisements::find($id);
         $a->delete();
         return redirect('advertisement')->with('success','Advertisement has been removed!');
     }
@@ -57,4 +57,18 @@ class AdminController extends Controller
         $c->delete();
         return redirect('category')->with('success','Category has been deleted!');
     }
+    public function notify($id){
+            $a=advertisements::find($id);
+            $a->flag=1;
+            $a->save();
+            return redirect('notification')->with('success','Advertisement has been accepted!');
+    }
+    public function check($id){
+        $a=advertisements::find($id);
+        return view('admin.preview')->with('add',$a);
+    }
+    public function back(){
+        return redirect('notification');
+    }
+
 }
