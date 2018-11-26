@@ -53,3 +53,6 @@ Route::get('notification', 'AdminController@index');
 Route::get('/notify/{id}','AdminController@notify')->name('notify');
 Route::get('preview/{id}', 'AdminController@check')->name('check');
 Route::get('/back', 'AdminController@back')->name('back');
+
+//Payment related
+Route::post('/charge', 'CheckoutController@charge');

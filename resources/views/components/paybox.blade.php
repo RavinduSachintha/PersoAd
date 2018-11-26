@@ -8,6 +8,7 @@
             data-description="Online course about integrating Stripe"
             data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
             data-locale="auto"
-            data-currency="usd">
+            data-currency="usd"
+            data-receipt_email="ravindusachintha53@gmail.com">
     </script>
 </form>
