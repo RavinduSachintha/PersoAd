@@ -32,9 +32,9 @@ i{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color:black;
+    background-color: black;
     overflow-x: hidden;
-    padding-top: 100px;
+    padding-top: 75px;
 }
 
 .sidenav a {
@@ -49,9 +49,17 @@ i{
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #f1f1f1 !important;
 }
-
+.nav-tabs .nav-link.active {
+    color: white;
+    background-color:#007bff !important;
+    border-color: transparent !important;
+}
+.tab-content{
+    margin-left:-250px; 
+    margin-top:-80px;
+}
 .main {
     margin-left: 230px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
