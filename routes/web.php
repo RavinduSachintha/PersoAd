@@ -13,16 +13,14 @@
 
 Auth::routes();
 
+/* Main site pages' routes */
 Route::get('/', 'PagesController@index');
-
-
 Route::get('/shop', 'PagesController@shop');
-
 Route::get('/cart', 'PagesController@cart');
-
 Route::get('/checkout', 'PagesController@checkout');
 
-
+/* Payments related routes */
+Route::post('/charge', 'CheckoutController@charge');
 
 //Route::get('/user-account', 'UserController@index')->name('user-account');
 Route::get('/user-account', 'CategoriesController@show')->name('user-account');
@@ -36,12 +34,12 @@ Route::get('/admin', 'AdminController@index');
 Route::get('users', 'AdminController@user');
 Route::get('advertisement', 'AdminController@adver');
 Route::get('category', 'AdminController@category');
-Route::get('/delete/{id}','AdminController@destroy')->name('delete');
-Route::get('/deletead/{id}','AdminController@deletead')->name('deletead');
-Route::get('createcategory','AdminController@create');
-Route::post('createCat','AdminController@createcat');
-Route::get('/deletecat/{id}','AdminController@deletecat')->name('deletecat');
+Route::get('/delete/{id}', 'AdminController@destroy')->name('delete');
+Route::get('/deletead/{id}', 'AdminController@deletead')->name('deletead');
+Route::get('createcategory', 'AdminController@create');
+Route::post('createCat', 'AdminController@createcat');
+Route::get('/deletecat/{id}', 'AdminController@deletecat')->name('deletecat');
 Route::get('notification', 'AdminController@index');
-Route::get('/notify/{id}','AdminController@notify')->name('notify');
+Route::get('/notify/{id}', 'AdminController@notify')->name('notify');
 Route::get('preview/{id}', 'AdminController@check')->name('check');
 Route::get('/back', 'AdminController@back')->name('back');
