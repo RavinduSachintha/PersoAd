@@ -63,9 +63,11 @@
                             <div class="single-product-wrapper">
                                 <!-- Product Image -->
                                 <div class="product-img">
-                                    <img src="http://127.0.0.1:8000/storage/Advertisements/{{$a->photo}}" alt="">
-                                    <!-- Hover Thumb -->
-                                    <img class="hover-img" src="img/product-img/product3.jpg" alt="">
+                                    <a href="product-details/{{$a->id}}">
+                                        <img src="http://127.0.0.1:8000/storage/Advertisements/{{$a->photo}}" alt="">
+                                        <!-- Hover Thumb -->
+                                        <img class="hover-img" src="img/product-img/product3.jpg" alt="">
+                                    </a>
                                 </div>
                     
                                 <!-- Product Description -->
@@ -73,9 +75,8 @@
                                     <!-- Product Meta Data -->
                                     <div class="product-meta-data">
                                         <div class="line"></div>
-                                        <p class="product-price">$180</p>
                                         <a href="product-details.blade.php">
-                                            <h6>Modern Chair</h6>
+                                            <h6>{{$a->title}}</h6>
                                         </a>
                                     </div>
                                     <!-- Ratings & Cart -->
