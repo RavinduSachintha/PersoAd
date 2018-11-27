@@ -113,7 +113,6 @@
 
                             <div class="cart-btn mt-100">
                                 <a href="#" class="btn amado-btn w-100">Checkout</a>
-                                @include('components.paybox')
                             </div>
                         </div>
                     </div>
