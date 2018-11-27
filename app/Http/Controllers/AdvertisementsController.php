@@ -58,7 +58,8 @@ class AdvertisementsController extends Controller
 
     public function view(advertisements $advertisements)
     {
-        $advertisements = Advertisements::orderBy('id', 'desc')->where('flag' , '1')->where('paid' , 'no')->get();
+        $user_id = Auth::user()->id;
+        $advertisements = Advertisements::orderBy('id', 'desc')->where('flag' , '1')->where('paid' , 'no')->where('user_id' ,'=', $user_id)->get();
         return view('pages.adds_table', compact('advertisements'));
     }
     /**

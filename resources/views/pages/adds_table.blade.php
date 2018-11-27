@@ -14,8 +14,8 @@
                         </div>
                     @endif
 
-                    <!-- ##### Main Content Wrapper Start ##### -->
-                    <div class="main-content-wrapper d-flex clearfix">
+                    
+                    
 
                     @foreach($advertisements as $advertisements)
                     <div class="row">
@@ -36,9 +36,10 @@
                         
                         </div>
                     </div>
+                    <br>
                     
                     @endforeach
-                    </div>
+                    
                     <br>
 
                    
