@@ -51,6 +51,11 @@
                                     </form>
                                 </div>
                             </li>
+                            <li>
+                                <a id="navbarDropdown" class="nav-link" href="/adds_table" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Your Advertisements 
+                                </a>
+                            </li>
                         @endguest
                     </ul>
                 </div>
