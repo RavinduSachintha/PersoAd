@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\advertisements;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class AdvertisementsController extends Controller
@@ -12,10 +14,6 @@ class AdvertisementsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     function index()
     {
@@ -37,17 +35,27 @@ class AdvertisementsController extends Controller
     {
         $advertisements = new advertisements();
         advertisements::create([
+            'user_id' => Auth::user()->id,
             'title'=> request('title'),
             'category'=> request('category'),
             'body' => request('body'),
             'photo' => $request->photo->getClientOriginalName(),
         ]);
+
+        /*$advertisements->user_id = Auth::user()->id;
+        $advertisements->save();*/
         $request->file('photo')->storeAs('public/Advertisements',$request->photo->getClientOriginalName());
         
         
         return redirect('user-account');
     }
 
+
+    public function view(advertisements $advertisements)
+    {
+        $advertisements = Advertisements::orderBy('id', 'desc')->where('flag' , '1')->where('paid' , 'no')->get();
+        return view('pages.adds_table', compact('advertisements'));
+    }
     /**
      * Display the specified resource.
      *
