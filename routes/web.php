@@ -20,20 +20,20 @@ Route::get('/cart', 'PagesController@cart');
 Route::get('/checkout', 'PagesController@checkout');
 
 //Public user dashboard
-Route::get('/user-account', 'CategoriesController@show')->name('user-account');
-
-//Saving the advertisements and redirect to the dashboard
-Route::post('/user-account', 'AdvertisementsController@store')->name('user-account');
+Route::get('/user-account', 'CategoriesController@show')->middleware('is_normal_user')->name('user-account');
+Route::post('/user-account', 'AdvertisementsController@store')->middleware('is_normal_user')->name('user-account');
 Route::get('/adds_table', 'AdvertisementsController@view');
+
+
 
 //Detailed view of an advertisement
 Route::get('/product-details/{id}', 'PagesController@view')->name('product-details');
 
 //Admin panel
-Route::get('/admin', 'AdminController@index');
+Route::get('/admin', 'AdminController@index')->middleware('is_admin')->name('admin');
 
 //Users controlling in admin panel
-Route::get('users', 'AdminController@user');
+Route::get('/users', 'AdminController@user');
 Route::get('/delete/{id}','AdminController@destroy')->name('delete');
 
 //Advertisement controlling in admin panel

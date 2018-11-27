@@ -15,6 +15,11 @@ class AdvertisementsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function __construct()
+    {
+//        $this->middleware('auth');
+    }
+
     function index()
     {
         return view('pages.user-account');
