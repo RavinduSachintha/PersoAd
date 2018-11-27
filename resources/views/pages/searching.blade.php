@@ -31,7 +31,7 @@
                             <div class="product-sorting d-flex">
                                 <div class="sort-by-date d-flex align-items-center mr-15">
                                     <p>Categories</p>
-                                    <form method="GET" action="/search">
+                                    <form method="GET" action="/searching">
                                         <select name="select" id="select">
                                         @foreach ($cato as $c)
                                         <option value="{{$c->name}}">{{$c->name}}</option>
