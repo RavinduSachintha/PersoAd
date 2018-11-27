@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 use App\advertisements;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMailable;
+
 class PagesController extends Controller
 {
     /**
