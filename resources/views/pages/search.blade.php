@@ -11,19 +11,19 @@
 
         @include('components.header')
 
-        <div class="amado_product_area section-padding-100">
-            <div class="container-fluid">
+        <div class="amado_product_area section-padding-0">
+            {{--<div class="container-fluid">--}}
 
-                <div class="row">
+                <div class="row mt-5">
                     <div class="col-12">
                         <div class="product-topbar d-xl-flex align-items-end justify-content-between">
                             <!-- Total Products -->
                             <div class="total-products">
-                                <p>Showing 1-8 0f 25</p>
-                                <div class="view d-flex">
-                                    <a href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                                </div>
+                                {{--<p>Showing 1-8 0f 25</p>--}}
+                                {{--<div class="view d-flex">--}}
+                                    {{--<a href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a>--}}
+                                    {{--<a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>--}}
+                                {{--</div>--}}
                             </div>
                             <!-- Sorting -->
                             <div class="product-sorting d-flex">
@@ -88,7 +88,7 @@
                         @endforeach
                     </div>
                 </div>
-            </div>
+            {{--</div>--}}
         </div>
     </div>
 
