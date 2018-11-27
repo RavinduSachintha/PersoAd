@@ -15,7 +15,7 @@
 
                 @case(1)
                 <li class="active"><a href="/">Home</a></li>
-                <li><a href="/shop">Shop</a></li>
+                <li><a href="/search">Search</a></li>
                 <li><a href="/product-details">Product</a></li>
                 <li><a href="/cart">Cart</a></li>
                 <li><a href="/checkout">Checkout</a></li>
@@ -23,7 +23,7 @@
 
                 @case(2)
                 <li><a href="/">Home</a></li>
-                <li class="active"><a href="/shop">Shop</a></li>
+                <li class="active"><a href="/search">Search</a></li>
                 <li><a href="/product-details">Product</a></li>
                 <li><a href="/cart">Cart</a></li>
                 <li><a href="/checkout">Checkout</a></li>
@@ -31,7 +31,7 @@
 
                 @case(3)
                 <li><a href="/">Home</a></li>
-                <li><a href="/shop">Shop</a></li>
+                <li><a href="/search">Search</a></li>
                 <li class="active"><a href="/product-details">Product</a></li>
                 <li><a href="/cart">Cart</a></li>
                 <li><a href="/checkout">Checkout</a></li>
@@ -39,7 +39,7 @@
 
                 @case(4)
                 <li><a href="/">Home</a></li>
-                <li><a href="/shop">Shop</a></li>
+                <li><a href="/search">Search</a></li>
                 <li><a href="/product-details">Product</a></li>
                 <li class="active"><a href="/cart">Cart</a></li>
                 <li><a href="/checkout">Checkout</a></li>
@@ -47,7 +47,7 @@
 
                 @case(5)
                 <li><a href="/">Home</a></li>
-                <li><a href="/shop">Shop</a></li>
+                <li><a href="/search">Search</a></li>
                 <li><a href="/product-details">Product</a></li>
                 <li><a href="/cart">Cart</a></li>
                 <li class="active"><a href="/checkout">Checkout</a></li>
@@ -55,7 +55,7 @@
 
                 @case(6)
                 <li><a href="/">Home</a></li>
-                <li><a href="/shop">Shop</a></li>
+                <li><a href="/search">Search</a></li>
                 <li><a href="/product-details">Product</a></li>
                 <li><a href="/cart">Cart</a></li>
                 <li><a href="/checkout">Checkout</a></li>

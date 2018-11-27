@@ -26,5 +26,4 @@
         </div>
     </div>
 </div>
- @include('components.newsletter')
 @endsection
