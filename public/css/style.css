@@ -90,3 +90,14 @@
             border-top:0 none;
         }
     }
+
+    .des-visibility a div {
+        display: none;
+    }
+
+    .des-visibility a:hover div {
+        display: block;
+    }
+
+
+

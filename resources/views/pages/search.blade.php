@@ -11,19 +11,6 @@
 
         @include('components.header')
 
-        
-
-            <!-- ##### Single Widget ##### -->
-
-            <!-- ##### Single Widget ##### -->
-
-
-            <!-- ##### Single Widget ##### -->
-
-            <!-- ##### Single Widget ##### -->
-            
-        
-
         <div class="amado_product_area section-padding-100">
             <div class="container-fluid">
 
@@ -44,13 +31,13 @@
                                     <p>Categories</p>
                                     <form method="GET" action="/searching">
                                         <select name="select" id="select">
-                                        @foreach ($cat as $c)
-                                        <option value="{{$c->name}}">{{$c->name}}</option>
-                                        @endforeach
+                                            @foreach ($cat as $c)
+                                                <option value="{{$c->name}}">{{$c->name}}</option>
+                                            @endforeach
                                         </select>
                                         <button type="submit" class="btn btn-primary">{{ __('Search') }}
                                         </button>
-                                    <form>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -58,52 +45,53 @@
                     <div class="row">
                         <!-- Single Product Area -->
                         @foreach ($ad as $a)
-                        @if($a->paid=="yes")
-                        <div class="col-12 col-sm-6 col-md-12 col-xl-6">
-                            <div class="single-product-wrapper">
-                                <!-- Product Image -->
-                                <div class="product-img">
-                                    <a href="product-details/{{$a->id}}">
-                                        <img src="http://127.0.0.1:8000/storage/Advertisements/{{$a->photo}}" alt="">
-                                        <!-- Hover Thumb -->
-                                        <img class="hover-img" src="img/product-img/product3.jpg" alt="">
-                                    </a>
-                                </div>
-                    
-                                <!-- Product Description -->
-                                <div class="product-description d-flex align-items-center justify-content-between">
-                                    <!-- Product Meta Data -->
-                                    <div class="product-meta-data">
-                                        <div class="line"></div>
-                                        <a href="product-details.blade.php">
-                                            <h6>{{$a->title}}</h6>
-                                        </a>
-                                    </div>
-                                    <!-- Ratings & Cart -->
-                                    <div class="ratings-cart text-right">
-                                        <div class="ratings">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
+                            @if($a->paid=="yes")
+                                <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                                    <div class="single-product-wrapper">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <a href="product-details/{{$a->id}}">
+                                                <img src="http://127.0.0.1:8000/storage/Advertisements/{{$a->photo}}"
+                                                     alt="">
+                                                <!-- Hover Thumb -->
+                                                <img class="hover-img" src="img/product-img/product3.jpg" alt="">
+                                            </a>
                                         </div>
-                                        <div class="cart">
-                                            <a href="cart.blade.php" data-toggle="tooltip" data-placement="left"
-                                               title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
+
+                                        <!-- Product Description -->
+                                        <div class="product-description d-flex align-items-center justify-content-between">
+                                            <!-- Product Meta Data -->
+                                            <div class="product-meta-data">
+                                                <div class="line"></div>
+                                                <a href="product-details.blade.php">
+                                                    <h6>{{$a->title}}</h6>
+                                                </a>
+                                            </div>
+                                            <!-- Ratings & Cart -->
+                                            <div class="ratings-cart text-right">
+                                                <div class="ratings">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="cart">
+                                                    <a href="cart.blade.php" data-toggle="tooltip" data-placement="left"
+                                                       title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        @endif
+                            @endif
                         @endforeach
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!-- ##### Main Content Wrapper End ##### -->
 
 @endsection

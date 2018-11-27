@@ -971,7 +971,7 @@ img {
       top: 0;
       left: 0;
       content: '';
-      background-color: rgba(60, 60, 60, 0.7);
+      background-color: rgba(40, 40, 40, 0.9);
       z-index: 1;
       opacity: 0;
       visibility: visible; }

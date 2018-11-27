@@ -7,11 +7,11 @@
                  @foreach($advertisements as $advertisements)
                     <?php if($count1 == 9) break; ?>
                         
-                    <div class="single-products-catagory clearfix">
+                    <div class="single-products-catagory clearfix des-visibility">
                         <a href="product-details/{{$advertisements->id}}">
 
                                 <img src="http://127.0.0.1:8000/storage/Advertisements/{{$advertisements->photo}}" alt="">
-                                <div class="hover-content">
+                                <div class="hover-content mt-50">
                                     <div class="line"></div>
                                     <p>{{ $advertisements->title}}</p>
                                     <h4>{{ $advertisements->category}}</h4>
