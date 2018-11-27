@@ -1,4 +1,4 @@
-<form action="/charge" method="POST">
+<form action="/charge/{{$advertisement->id}}" method="POST">
     {{ csrf_field() }}
     <script
             src="https://checkout.stripe.com/checkout.js" class="stripe-button"

@@ -6,10 +6,11 @@ use Illuminate\Http\Request;
 use Stripe\Stripe;
 use Stripe\Customer;
 use Stripe\Charge;
+use App\advertisements;
 
 class CheckoutController extends Controller
 {
-    public function charge(Request $request)
+    public function charge(Request $request, $id_no)
     {
         try {
             Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
@@ -25,7 +26,11 @@ class CheckoutController extends Controller
                 'currency' => 'usd'
             ));
 
-            return 'Charge successful, you get the course!';
+            $a=advertisements::find($id_no);
+            $a->paid='yes';
+            $a->save();
+
+            return redirect('adds_table');
         } catch (\Exception $ex) {
             return $ex->getMessage();
         }

@@ -30,7 +30,7 @@ Route::get('/adds_table', 'AdvertisementsController@view');
 Route::get('/product-details/{id}', 'PagesController@view')->name('product-details');
 
 //Payment related
-Route::post('/charge', 'CheckoutController@charge');
+Route::post('/charge/{id_no}', 'CheckoutController@charge')->name('charge');
 
 
 

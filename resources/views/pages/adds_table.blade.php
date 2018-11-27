@@ -17,20 +17,18 @@
                     
                     
 
-                    @foreach($advertisements as $advertisements)
+                    @foreach($advertisements as $advertisement)
                     <div class="row w-100">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 offset-md-2">
                         <form method="POST" action="/adds_creating">
                           {{ csrf_field() }}
 
-                            {{ $advertisements->title}}
+                            {{ $advertisement->title }}
                         
                         </form>
                         </div>
                         <div class="col-md-4">
-                            @include('components.paybox')
+                            @include('components.paybox',['advertisement'=> $advertisement])
                         </div>
                     </div>
                     <br>
