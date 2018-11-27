@@ -124,6 +124,4 @@
     </div>
     <!-- ##### Main Content Wrapper End ##### -->
 
-    @include('components.newsletter')
-
 @endsection
