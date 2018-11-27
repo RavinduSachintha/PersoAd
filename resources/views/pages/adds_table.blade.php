@@ -18,10 +18,10 @@
                     
 
                     @foreach($advertisements as $advertisements)
-                    <div class="row">
+                    <div class="row w-100">
                         <div class="col-md-2">
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-6">
                         <form method="POST" action="/adds_creating">
                           {{ csrf_field() }}
 
@@ -29,11 +29,8 @@
                         
                         </form>
                         </div>
-                        <div class="col-sm-2">
-                                <a href=#><button type="submit" class="btn btn-primary">{{ __('Payment') }}
-                                </button>
-                            </a>
-                        
+                        <div class="col-md-4">
+                            @include('components.paybox')
                         </div>
                     </div>
                     <br>
@@ -48,5 +45,5 @@
         </div>
     </div>
 </div>
- @include('components.newsletter')
+
 @endsection
