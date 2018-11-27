@@ -68,7 +68,7 @@
 
     <!-- Button Group -->
     <div class="amado-btn-group mt-30 mb-100">
-        <a href="/user-account" class="btn amado-btn mb-15">User Account</a>
+        <a href="/login" class="btn amado-btn mb-15">User Account</a>
         <a href="/register" class="btn amado-btn active">Register Now</a>
     </div>
 
