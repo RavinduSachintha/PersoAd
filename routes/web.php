@@ -32,7 +32,7 @@ Route::get('/', 'AdvertisementsController@show');
 Route::get('/product-details/{id}', 'AdvertisementsController@view')->name('product-details');
 
 //Admin panel
-Route::get('/admin', 'AdminController@index');
+Route::get('/admin', 'AdminController@index')->middleware('is_admin')->name('admin');
 
 //Users controlling in admin panel
 Route::get('users', 'AdminController@user');

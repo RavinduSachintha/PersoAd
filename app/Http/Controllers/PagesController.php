@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMailable;
+
 class PagesController extends Controller
 {
     /**
