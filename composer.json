@@ -9,7 +9,11 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
+<<<<<<< HEAD
+        "laravelcollective/html": "^5.7"
+=======
         "stripe/stripe-php": "^6.22"
+>>>>>>> 1f56841e49f23ddf3990fb12f17099b4cb2589da
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
