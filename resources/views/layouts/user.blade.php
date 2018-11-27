@@ -5,12 +5,12 @@
 
 <body>
 
-    <div id="app">
+        <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    PersoAd
-                </a>
+                <div class="navbar-brand">
+                    <a href="/"><img src="img/core-img/logo.png" alt=""></a>
+                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -59,7 +59,7 @@
                         @endguest
                     </ul>
                 </div>
-            </div>
+           
         </nav>
 
         <main class="py-4">
@@ -67,9 +67,8 @@
         </main>
 
     </div>
-
+</div>
     @include('layouts.scripts')
-
 </body>
 
 </html>

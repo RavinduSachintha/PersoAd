@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\advertisements;
-
+use App\Category;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMailable;
+use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
@@ -66,5 +67,21 @@ class PagesController extends Controller
     {
         $navVal = 6;
         return view('pages.adds_creating')->with('navVal', $navVal);
+    }
+
+    function shop1()
+    {
+        $navVal = 2;
+        return view('pages.search')->with('navVal', $navVal)
+        ->with('cat', Category::all())
+        ->with('ad', advertisements::all());
+    }
+    function search(Request $request)
+    {
+        $navVal = 2;
+        return view('pages.searching')->with('navVal', $navVal)
+        ->with('ca', $request->input('select'))
+        ->with('ad', advertisements::all())
+        ->with('cato', Category::all());
     }
 }
