@@ -25,11 +25,8 @@ Route::get('/user-account', 'CategoriesController@show')->name('user-account');
 //Saving the advertisements and redirect to the dashboard
 Route::post('/user-account', 'AdvertisementsController@store')->name('user-account');
 
-//Showing the advertisements in the home page
-Route::get('/', 'AdvertisementsController@show');
-
 //Detailed view of an advertisement
-Route::get('/product-details/{id}', 'AdvertisementsController@view')->name('product-details');
+Route::get('/product-details/{id}', 'PagesController@view')->name('product-details');
 
 //Admin panel
 Route::get('/admin', 'AdminController@index');
