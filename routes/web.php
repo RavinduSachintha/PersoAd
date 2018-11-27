@@ -21,15 +21,18 @@ Route::get('/cart', 'PagesController@cart');
 Route::get('/checkout', 'PagesController@checkout');
 Route::get('/searching', 'PagesController@search');
 
+
+
 //Public user dashboard
 Route::get('/user-account', 'CategoriesController@show')->middleware('is_normal_user')->name('user-account');
 Route::post('/user-account', 'AdvertisementsController@store')->middleware('is_normal_user')->name('user-account');
 Route::get('/adds_table', 'AdvertisementsController@view');
-
-
-
-//Detailed view of an advertisement
 Route::get('/product-details/{id}', 'PagesController@view')->name('product-details');
+
+//Payment related
+Route::post('/charge', 'CheckoutController@charge');
+
+
 
 //Admin panel
 Route::get('/admin', 'AdminController@index')->middleware('is_admin')->name('admin');
@@ -54,5 +57,3 @@ Route::get('/notify/{id}','AdminController@notify')->name('notify');
 Route::get('preview/{id}', 'AdminController@check')->name('check');
 Route::get('/back', 'AdminController@back')->name('back');
 
-//Payment related
-Route::post('/charge', 'CheckoutController@charge');
