@@ -23,9 +23,10 @@ Route::get('/searching', 'PagesController@search');
 
 //Public user dashboard
 Route::get('/user-account', 'CategoriesController@show')->middleware('is_normal_user')->name('user-account');
-
-//Saving the advertisements and redirect to the dashboard
 Route::post('/user-account', 'AdvertisementsController@store')->middleware('is_normal_user')->name('user-account');
+Route::get('/adds_table', 'AdvertisementsController@view');
+
+
 
 //Detailed view of an advertisement
 Route::get('/product-details/{id}', 'PagesController@view')->name('product-details');
