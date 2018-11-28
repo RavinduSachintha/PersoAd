@@ -50,7 +50,7 @@ class PagesController extends Controller
     function cart()
     {
         $navVal = 4;
-        return view('pages.cart')->with('navVal', $navVal);
+        return view('pages.development')->with('navVal', $navVal);
     }
 
 
@@ -60,7 +60,7 @@ class PagesController extends Controller
     function checkout()
     {
         $navVal = 5;
-        return view('pages.checkout')->with('navVal', $navVal);
+        return view('pages.development')->with('navVal', $navVal);
     }
 
     function adds_creating()
