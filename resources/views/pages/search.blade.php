@@ -49,14 +49,14 @@
                                 <div class="col-12 col-sm-6 col-md-12 col-xl-6">
                                     <div class="single-product-wrapper">
                                         <!-- Product Image -->
-                                        <div class="product-img">
-                                            <a href="product-details/{{$a->id}}">
-                                                <img src="http://127.0.0.1:8000/storage/Advertisements/{{$a->photo}}"
-                                                     alt="">
-                                                <!-- Hover Thumb -->
-                                                <img class="hover-img" src="img/product-img/product3.jpg" alt="">
-                                            </a>
-                                        </div>
+                                            <div class="product-img">
+                                                <a href="product-details/{{$a->id}}">
+                                                    <img src="http://127.0.0.1:8000/storage/Advertisements/{{$a->photo}}"
+                                                         alt="">
+                                                    <!-- Hover Thumb -->
+                                                    <img class="hover-img" src="http://127.0.0.1:8000/storage/Advertisements/{{$a->photo}}" alt="">
+                                                </a>
+                                            </div>
 
                                         <!-- Product Description -->
                                         <div class="product-description d-flex align-items-center justify-content-between">
