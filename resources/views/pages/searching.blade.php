@@ -33,8 +33,11 @@
                                     <p>Categories</p>
                                     <form method="GET" action="/searching">
                                         <select name="select" id="select">
+                                        <option value="{{$ca}}">{{$ca}}</option>   
                                         @foreach ($cato as $c)
+                                        @if($c->name!=$ca)
                                         <option value="{{$c->name}}">{{$c->name}}</option>
+                                        @endif
                                         @endforeach
                                         </select>
                                         <button type="submit" class="btn btn-primary">{{ __('Search') }}
