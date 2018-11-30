@@ -2,13 +2,24 @@
 ## Online System for Personal Advertisements
 
 ### Introduction
-There are many sites that provides users to post advertisements about products, or else to contact public users to provide services. There is no specific system to provide a common platform to publish any type of advertisement. Also when users can add many types of advertisements, unnecessary junks can be added to the system.
+There are many sites that provides users to post advertisements about products, or else 
+to contact public users to provide services. There is no specific system to provide 
+a common platform to publish any type of advertisement. Also when users can add many types of advertisements, 
+unnecessary junks can be added to the system.
+
+<br>
 
 ![Capture01](./readme-assets/Capture01.PNG)
 
+<br>
+
 ![Capture02](./readme-assets/Capture02.PNG)
 
+<br>
+
 ![Capture01](./readme-assets/Capture03.PNG)
+
+<br>
 
 ### Project Scope
 
@@ -22,10 +33,14 @@ There are many sites that provides users to post advertisements about products, 
 - The system does not concern about communications between the users posting advertisements and the buyers who wants to contact the advertisements.
 - The interface for the buyers.
 
+<br>
+
 ### Used Technologies
 
 - [Laravel as Backend Framework](https://laravel.com/)
 - [Stripe as Payment Gateway](https://stripe.com/)
+
+<br>
 
 ### Installation Guidance
 
@@ -64,6 +79,8 @@ STRIPE_SECRET_KEY=<Your Stripe Account Secret Key>
 shell:~$ php artisan serve
 ```
 
+<br>
+
 ### Developers
 <table>
 <tr>
@@ -80,10 +97,14 @@ shell:~$ php artisan serve
 </tr>
 </table>
 
+<br>
+
 ### Contributing
 Warmly welcome to developers for contributing **PersoAd** Project. Make sure to open an issue and communicate with us before 
 creating a Pull Request.
 
+<br>
+
 ### License
 
-The PersoAd System is open-sourced software solution licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The PersoAd System is open-sourced software solution licensed under the [GNU General Public License v3.0](./LICENSE).
