@@ -1,65 +1,89 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+![PersoAd](./readme-assets/logo.png)
+## Online System for Personal Advertisements
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+### Introduction
+There are many sites that provides users to post advertisements about products, or else to contact public users to provide services. There is no specific system to provide a common platform to publish any type of advertisement. Also when users can add many types of advertisements, unnecessary junks can be added to the system.
 
-## About Laravel
+![Capture01](./readme-assets/Capture01.PNG)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+![Capture02](./readme-assets/Capture02.PNG)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![Capture01](./readme-assets/Capture03.PNG)
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+### Project Scope
 
-## Learning Laravel
+**IN SCOPE**
+- Full featured dynamic website with member registration facility and publishing personal advertisements facility.
+  - Any public user can register into the system and create their profile in order to post advertisements. The system also provides the facility to select a category that the advertisement should be appeared to the public and for that, a variety of categories will be added to the system.
+- Administration System 
+  - Administrative interface as a part of the main system in order to perform administrative functionalities of the system.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+**OUT SCOPE**
+- The system does not concern about communications between the users posting advertisements and the buyers who wants to contact the advertisements.
+- The interface for the buyers.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+### Used Technologies
 
-## Laravel Sponsors
+- [Laravel as Backend Framework](https://laravel.com/)
+- [Stripe as Payment Gateway](https://stripe.com/)
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+### Installation Guidance
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
+**PREREQUISITES**
 
-## Contributing
+- Latest Version of Laravel Framework with Composer
+- Stripe account (For payment section / Optional)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**HOW TO INSTALL**
 
-## Security Vulnerabilities
+- Fork and clone the github repository of the project.
+- Run following bash commands inside your project directory as the order.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```console
+shell:~$ composer install
+.........................
+.........................
+shell:~$ php artisan migrate
+.........................
+.........................
+shell:~$ php artisan storage:link
+.........................
+.........................
+```
 
-## License
+- Then add the following code segment into the end of your .env file
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+STRIPE_PUB_KEY=<Your Stripe Account Public Key>
+STRIPE_SECRET_KEY=<Your Stripe Account Secret Key>
+```
+
+- Finally run the web server and go to the [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+```console
+shell:~$ php artisan serve
+```
+
+### Developers
+<table>
+<tr>
+<td align="center"><img src="https://avatars0.githubusercontent.com/u/25032998?s=460&v=4" width=200></td>
+<td align="center"><img src="https://avatars3.githubusercontent.com/u/36721132?s=460&v=4" width=200></td>
+<td align="center"><img src="https://avatars3.githubusercontent.com/u/40149373?s=460&v=4" width=200></td>
+<td align="center"><img src="https://scontent.fcmb1-1.fna.fbcdn.net/v/t1.0-1/p160x160/34344310_559649131098004_615801102251589632_n.jpg?_nc_cat=106&_nc_ht=scontent.fcmb1-1.fna&oh=c6f24c1c789716df004cce87ad330e12&oe=5C6935D1" width=200></td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/RavinduSachintha">Ravindu Sachintha</a></td>
+<td align="center"><a href="https://github.com/Nidu96">Nidu Shihani</a></td>
+<td align="center"><a href="https://github.com/HiranTharinda">Hiran Tharinda</a></td>
+<td align="center"><a href="https://github.com/ChathuriChandima">Chathuri Chandima</a></td>
+</tr>
+</table>
+
+### Contributing
+Warmly welcome to developers for contributing **PersoAd** Project. Make sure to open an issue and communicate with us before 
+creating a Pull Request.
+
+### License
+
+The PersoAd System is open-sourced software solution licensed under the [MIT license](https://opensource.org/licenses/MIT).
