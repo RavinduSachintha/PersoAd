@@ -21,8 +21,6 @@ Route::get('/cart', 'PagesController@cart');
 Route::get('/checkout', 'PagesController@checkout');
 Route::get('/searching', 'PagesController@search');
 
-
-
 //Public user dashboard
 Route::get('/user-account', 'CategoriesController@show')->middleware('is_normal_user')->name('user-account');
 Route::post('/user-account', 'AdvertisementsController@store')->middleware('is_normal_user')->name('user-account');
