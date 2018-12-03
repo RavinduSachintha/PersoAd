@@ -11,7 +11,9 @@
 
         @include('components.header')
 
-        <center><h5>This page is still under construction...</h5></center>
+        <div class="mt-5 pt-5 mx-auto">
+            <h5 class="mt-5 pt-5 text-primary">This page is still under construction...</h5>
+        </div>
 
     </div>
     <!-- ##### Main Content Wrapper End ##### -->

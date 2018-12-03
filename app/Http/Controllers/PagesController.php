@@ -41,7 +41,7 @@ class PagesController extends Controller
     function product_details()
     {
         $navVal = 3;
-        return view('pages.product-details')->with('navVal', $navVal);
+        return view('pages.development')->with('navVal', $navVal);
     }
 
     /**

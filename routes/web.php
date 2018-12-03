@@ -17,6 +17,7 @@ Auth::routes();
 Route::get('/', 'PagesController@index');
 Route::get('/shop', 'PagesController@shop');
 Route::get('/search', 'PagesController@shop1');
+Route::get('/product-details','PagesController@product_details');
 Route::get('/cart', 'PagesController@cart');
 Route::get('/checkout', 'PagesController@checkout');
 Route::get('/searching', 'PagesController@search');
