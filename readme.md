@@ -1,4 +1,4 @@
-![PersoAd](./readme-assets/logo.png)
+![PersoAd](./readme-assets/logo.png) &nbsp;&nbsp;&nbsp;&nbsp; ![Academic-Project](https://img.shields.io/badge/Academic%20Project-Laravel-blue)
 ## Online System for Personal Advertisements
 
 ### Introduction
